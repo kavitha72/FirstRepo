@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>First AngularJS Application</title>
+
+    <script src="scripts/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="script.js"></script>
+    <style>
+        div {
+            width: 100%;
+            height: 50px;
+            display: block;
+            margin: 15px 0 0 10px;
+        }
+    </style>
+</head>
+<body ng-app ng-init="checked=true">
+    Click Me: <input type="checkbox" ng-model="checked" /> <br />
+    <div>
+        New: <input ng-if="checked" type="text" />
+    </div>
+    <div>
+        Read-only: <input ng-readonly="checked" type="text" value="This is read-only." />
+    </div>
+    <div>
+        Disabled: <input ng-disabled="checked" type="text" value="This is disabled." />
+    </div>
+
+    Enter Name:  <input type="text" ng-model="name" /> <br />
+    data-ng-bind: <span data-ng-bind="name"></span><br />
+    data-ng:bind: <span data-ng:bind="name"></span><br />
+    data:ng:bind: <span data:ng:bind="name"></span><br />
+    x:ng:bind:    <span x:ng:bind="name"></span><br />
+    ng:bind:      <span ng:bind="name"></span><br />
+    x-ng-bind:    <span x-ng-bind="name"></span><br />
+    x_ng_bind:    <span x_ng_bind="name"></span><br />
+    ng_bind:      <span ng_bind="name"></span>
+</body>
+</html>
