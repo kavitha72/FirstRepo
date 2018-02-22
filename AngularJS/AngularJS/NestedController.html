@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <title>First AngularJS Application</title>
+
+    <script src="scripts/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="script1.js"></script>
+    <!--<style>
+        div {
+            width: 100%;
+            height: 50px;
+            display: block;
+            margin: 15px 0 0 10px;
+        }
+    </style>-->
+</head>
+<body>
+    <div ng-controller="parentController">
+        Controller Name: {{controllerName}} <br />
+        Message: {{message}} <br />
+        <div style="margin:10px 0 10px 20px;" ng-controller="childController">
+            Controller Name: {{controllerName}} <br />
+            Message: {{message}} <br />
+        </div>
+    </div>
+    <div ng-controller="siblingController">
+        Controller Name: {{controllerName}} <br />
+        Message: {{message}} <br />
+    </div>   
+
+</body>
+</html>
+

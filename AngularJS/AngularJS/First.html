@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myAngularApp">
 <head>
     <title>First AngularJS Application</title>
 
@@ -16,26 +16,11 @@
         }
     </style>
 </head>
-<body ng-app ng-init="checked=true">
-    Click Me: <input type="checkbox" ng-model="checked" /> <br />
-    <div>
-        New: <input ng-if="checked" type="text" />
-    </div>
-    <div>
-        Read-only: <input ng-readonly="checked" type="text" value="This is read-only." />
-    </div>
-    <div>
-        Disabled: <input ng-disabled="checked" type="text" value="This is disabled." />
-    </div>
-
-    Enter Name:  <input type="text" ng-model="name" /> <br />
-    data-ng-bind: <span data-ng-bind="name"></span><br />
-    data-ng:bind: <span data-ng:bind="name"></span><br />
-    data:ng:bind: <span data:ng:bind="name"></span><br />
-    x:ng:bind:    <span x:ng:bind="name"></span><br />
-    ng:bind:      <span ng:bind="name"></span><br />
-    x-ng-bind:    <span x-ng-bind="name"></span><br />
-    x_ng_bind:    <span x_ng_bind="name"></span><br />
-    ng_bind:      <span ng_bind="name"></span>
+<body>
+    
+    Message :  {{message}}<br />
+    <span ng-bind="message"></span> <br />
+    <input type="text" ng-model="message" /> 
+      
 </body>
 </html>
